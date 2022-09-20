@@ -500,6 +500,8 @@ form .create-desc.orange textarea{
     .create .txt-input{
         width: 100%;
         display: flex;
+        overflow: scroll;
+        flex-wrap: nowrap;
         flex-direction: column;
         height: 100vh;
         padding: 10px 12px;
