@@ -480,6 +480,10 @@ form .create-desc.orange textarea{
     .labels.nav-show button{
         margin-bottom: 0.3rem;
     }
+    .addBox {
+        top: 90%;
+    }
+    
     .addBox .icon{
         width: 60px;
         height: 60px;
