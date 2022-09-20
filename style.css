@@ -507,6 +507,7 @@ form .create-desc.orange textarea{
         padding: 10px 12px;
     }
     .txt-input .header{
+        margin-top: 2rem;
         margin-bottom: 16px;
     }
     .txt-input .icons{
@@ -543,6 +544,7 @@ form .create-desc.orange textarea{
         background: #474747;
         border-radius: 10px;
         cursor: pointer;
+        margin-bottom: 10px;
     }
 }
 @media (max-width: 850px) and (min-width: 700px) {
