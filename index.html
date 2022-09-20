@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Note</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+</head>
+<body>
+    <header>
+        <div class="logo">The.Notes</div>
+        <div class="labels">
+            <button class="all-btn btn" data-filter="all">All</button>
+            <button class="important-btn btn" data-filter="red">Important</button>
+            <button class="school-btn btn" data-filter="blue">School</button>
+            <button class="work-btn btn" data-filter="green">Work</button>
+            <button class="others-btn btn" data-filter="orange">others</button>
+        </div>
+        <div class="label-all">
+            <li class="v"><il class="uil uil-ellipsis-v"></il></li>
+            <li class="h"><il class="uil uil-times"></il></li>
+        </div>
+        <div class="mode" aria-label="toggle dark mode">
+            <li><il class="uil uil-sunset"></il></li>
+            <li><il class="uil uil-moonset"></il></li>
+        </div>
+    </header>
+    
+    <main>
+        <section class="create">
+            <div class="txt-input">
+                <div class="header">
+                    <p>Create New Note</p>
+                    <i class="uil uil-times closebtn"></i>
+                </div>
+                <div class="icons">
+                    <button class="important-btn btn">Important</button>
+                    <button class="school-btn btn">School</button>
+                    <button class="work-btn btn">Work</button>
+                    <button class="others-btn btn">others</button>
+                </div>
+                <div>
+                    <form>
+                        <div class="create-title">
+                            <input type="text" name="title" id="title-txt" placeholder="Title...">
+                        </div>
+                        <div class="create-desc">
+                            <textarea name="desc" id="desc-txt" placeholder="Enter your text... "></textarea>
+                        </div>
+                        <button><i class="uil uil-plus" style="margin-right: 10px;"></i>Save Note</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="preview">
+            <img src="./images/undraw_add_notes_re_ln36.svg" alt="preview-img">
+            <p>Click The <i class="uil uil-edit-alt"></i>Button to add a new note</p>
+        </section>
+        <section class="note-wrapper" id="store-item">
+            <li class="addBox">
+                <div class="icon"><i class="uil uil-edit-alt"></i></div>
+            </li>
+            <!-- <div class="noteBox">
+                <div class="top">
+                    <div class="title">
+                        <p class="heading">Heading</p>
+                        <p class="time-box">September 15, 2022</p>
+                    </div>
+                    <div class="settings">
+                        <i class="uil uil-ellipsis-h"></i>
+                        <div class="menu">
+                            <li><il class="uil uil-pen"></il>Edit</li>
+                            <li><il class="uil uil-trash"></il>Delete</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem id nulla architecto non porro nesciunt tempora optio in mollitia consequuntur.</span>
+                </div>
+            </div> -->
+        </section>
+        <div class="scroll">
+            <li><il class="uil uil-angle-double-up"></il></li>
+        </div>
+        
+    </main>
+    <script src="./scripts.js"></script>
+</body>
+</html>

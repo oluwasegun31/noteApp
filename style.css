@@ -1,0 +1,689 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+    
+}
+.content::-webkit-scrollbar {
+    width: 5px; 
+    border-radius: 5px;
+}
+.content::-webkit-scrollbar-track{
+    background: #dbdbdb;
+    border-radius: 10px;
+}
+.content::-webkit-scrollbar-thumb{
+    background: rgb(182, 182, 182);
+    border-radius: 10px;
+}
+
+body{
+    background: rgba(241, 239, 239, 0.301);
+    color: #000;
+}
+/* header styling */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 1rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 5px 15px rgba(204, 208, 211, 0.247);
+    background: #fff;
+    z-index: 1;
+}
+.logo{
+    font-size: 32px;
+    color: #000;
+}
+.btn{
+    padding: 5px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.all-btn{
+    border: 2px solid #474747;
+    background: #fff;
+    color: #474747;
+}
+.all-btn:hover{
+    background: #474747;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.important-btn{
+    background: #fff;
+    border: 2px solid #e22929;
+    color: #e22929;
+}
+.important-btn:hover{
+    color: #fff;
+    background: #e22929;
+    transition: all 0.5s ease;
+}
+.school-btn{
+    border: 2px solid #88abff;
+    color: #88abff;
+    background: #fff;
+}
+.school-btn:hover{
+    background: #88abff;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.work-btn{
+    border: 2px solid green;
+    background: #fff;
+    color: green;
+}
+.work-btn:hover{
+    background: green;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.others-btn{
+    border: 2px solid orange;
+    background: #fff;
+    color: orange;
+}
+.others-btn:hover{
+    background: orange;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.label-all{
+    display: none;
+    cursor: pointer;
+}
+.label-all li{
+    font-size: 24px;
+    color: darkslategray;
+}
+/* main styling */
+main{
+    position: relative;
+    margin-top: 6.5rem;
+    height: auto;
+    padding: 0 1rem;
+}
+.addBox {
+    position: fixed;
+    right: 2rem;
+    top: 84%;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.addBox .icon{
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+    background: #474747;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 35px;
+    box-shadow: 0px 5px 15px rgba(151, 162, 170, 0.4);
+}
+.addBox .icon:hover{
+    font-size: 30px;
+    transition: all 0.4 ease-in-out;
+}
+.addBox .icon:hover i{
+    transform: translateY(-3px);
+    transition: all 0.4 ease-in-out;
+}
+.icon i{
+    transform: translateY(-8px);
+}
+
+
+.note-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 290px);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.noteBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 480px;
+}
+.noteBox .top{
+    width: 100%;
+    height: 90px;
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #cccbcb6e;
+    padding-bottom: 10px;
+    padding: 10px 12px;
+    overflow: hidden;
+}
+.noteBox .top .title{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.noteBox .top .settings{
+    display: grid;
+    justify-content: flex-end;
+    font-size: 26px;
+}
+.settings i {
+    cursor: pointer;
+}
+.title .heading{
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.title .time-box{
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.noteBox .content{
+    pointer-events: auto;
+    cursor: default;
+    width: 100%;
+    height: 100%;
+    padding: 12px 16px;
+    overflow: auto;
+    text-align: justify;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(151, 162, 170, 0.4);
+}
+.settings .menu {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 130px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(146, 157, 165, 0.2 );
+    font-size: 20px;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+.settings.show .menu{
+    transform: scale(1);
+}
+.menu li .uil-edit, .menu li .uil-trash{
+    margin-right: 12px;
+}
+.menu li:hover{
+    background: #ccc;
+}
+
+.preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 50vh;
+}
+.preview img{
+    width: 90%;
+    height: 100%;
+}
+.preview p {
+    margin-top: 0.5rem;
+    padding: 0 1rem;
+    font-size: 22px;
+    font-weight: 500;
+}
+/* create popup style */
+.create{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    transform: scale(0);
+    transform-origin: top;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.create.sett{
+    transform: scale(1);
+    pointer-events: auto;
+    transition: all 0.5s ease;
+}
+.create .txt-input{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 670px;
+    background: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+}
+.txt-input .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 26px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.header i{
+    cursor: pointer;
+}
+.txt-input .icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.txt-input form{
+    width: 100%;
+}
+.create-title{
+    margin: 10px 0;
+    width: 100%;
+    height: 45px;
+}
+
+.create-title input{
+    width: 100%;
+    height: 100%;
+    padding: 5px 15px;
+    font-size: 22px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #474747;
+}
+.create-desc {
+    margin: 15px 0;
+    width: 100%;
+    height: 20rem;
+}
+.create-desc textarea{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    resize: none;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-left: 3px solid #474747;
+}
+form button{
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    background: #474747;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.scroll{
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: #a8a4a4;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+}
+.scroll li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #fff;
+    transform: translateY(-5px);
+}
+.scroll:hover li{
+    font-size: 35px;
+    transition: all 0.3s ease;
+}
+.mode{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 5px 15px rgba(182, 193, 201, 0.4);
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    left: 40%;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.mode li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform:  translateY(-3px);
+    font-size: 32px;
+}
+.mode li .uil-moonset{
+    position: relative;
+    top: 20px;
+    transition: all 0.5s ease;
+}
+.mode li .uil-sunset{
+    position: relative;
+    top: 0;
+    transition: all 0.5s ease;
+}
+/* button color changes */
+.noteBox.red .top .title .heading, form .create-title.red input {
+    color: #e22929;
+    caret-color: #e22929;
+}
+.noteBox.blue .top .title .heading, form .create-title.blue input {
+    color: #88abff;
+    caret-color: #88abff;
+}
+.noteBox.green .top .title .heading, form .create-title.green input {
+    color: green;
+    caret-color: green;
+}
+.noteBox.orange .top .title .heading, form .create-title.orange input {
+    color: orange;
+    caret-color: orange;
+}
+
+form .create-desc.red textarea{
+    border-left: 3px solid #e22929;
+}
+form .create-desc.blue textarea{
+    border-left: 3px solid #88abff;
+}
+form .create-desc.green textarea{
+    border-left: 3px solid green;
+}
+form .create-desc.orange textarea{
+    border-left: 3px solid orange;
+}
+
+@media (max-width: 700px) {
+    .label-all{
+        display: block;
+    }
+    .labels{
+        display: none;
+        
+    }
+    .labels.nav-show{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        transition: all 0.5 ease;
+        animation: show 0.5s ease-in-out;
+        transform-origin: top right;
+    }
+    @keyframes show {
+        0%{
+            transform: scale(0);
+        }
+        50%{
+            transform: scale(1.1);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+    .v{
+        transition: all 1 ease;
+    }
+    .h{
+        display: none;
+        transition: all 1s ease;
+    }
+    .labels.nav-show button{
+        margin-bottom: 0.3rem;
+    }
+    .addBox .icon{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        font-size: 28px;
+    }
+    .addBox .icon:hover{
+        font-size: 25px;
+        transition: all 0.4 ease-in-out;
+    }
+    .addBox .icon:hover i{
+        transform: translateY(-3px);
+        transition: all 0.4 ease-in-out;
+    }
+    .create{
+        width: 100%;
+    }
+    .create .txt-input{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding: 10px 12px;
+    }
+    .txt-input .header{
+        margin-bottom: 16px;
+    }
+    .txt-input .icons{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+    .txt-input form .create-title{
+        margin-bottom: 20px;
+    }
+    .create-desc {
+        height: 25rem;
+    }
+    .icons .btn{
+        padding: 5px 5px;
+        border-radius: 5px;
+        font: 12px;
+        letter-spacing: 1px;
+        outline: none;
+        cursor: pointer;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    form button{
+        position: relative;
+        left: 50%;
+        width: 50%;
+        height: 50px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        border: none;
+        outline: none;
+        background: #474747;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+@media (max-width: 850px) and (min-width: 700px) {
+    .mode{
+        left: 25%;
+    }
+}
+@media (max-width: 329px) {
+    .icons .btn{
+        padding: 5px 3px;
+        margin-right: 2px;
+    }
+    
+}
+/* dark mode */
+/* header */
+header.dark{
+    background: #474747;
+    box-shadow: 5px 5px 10px rgba(89, 93, 97, 0.4);
+}
+header.dark .logo{
+    color: #fff;
+}
+header.dark .labels .btn{
+    background: transparent;
+}
+header.dark .labels .all-btn{
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+}
+header.dark .labels .all-btn:hover{
+    border: 2px solid #fff;
+    background: #fff;
+    color: #474747;
+}
+header.dark .label-all li{
+    font-size: 24px;
+    color: #fff;
+}
+
+header.dark .labels .important-btn:hover{
+    background: #e22929;
+    color: #fff;
+}
+header.dark .labels .school-btn:hover{
+    background: #88abff;
+    color: #fff;
+}
+header.dark .labels .work-btn:hover{
+    background: green;
+    color: #fff;
+}
+header.dark .labels .others-btn:hover{
+    background: orange;
+    border-color: orange;
+    color: #fff;
+}
+header.dark .labels .others-btn{
+    color: orange;
+    border: 1px solid orange;
+}
+.mode.dark {
+    background: #474747;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.mode.dark li {
+    transform: translateY(10px);
+    color: #fff;
+}
+.mode.dark li .uil-moonset{
+    position: relative;
+    top: -55px;
+    transition: all 0.5s ease;
+}
+.mode.dark li .uil-sunset{
+    position: relative;
+    top: 40px;
+    transition: all 0.5s ease;
+}
+header.dark .mode{
+    box-shadow: 5px 5px 10px rgba(89, 93, 97, 0.4);
+}
+
+/* main */
+body.dark{
+    background: #474747;
+    color: #fff;
+}
+body.dark main .note-wrapper .addBox .icon{
+    background: rgb(49, 48, 48);
+    box-shadow: 5px 5px 10px rgba(89, 93, 97, 0.4) ;
+}
+body.dark main .note-wrapper .noteBox .settings .menu{
+    background: #474747;
+}
+body.dark main .note-wrapper .noteBox .settings .menu li:hover{
+    background: #696969;
+}
+
+body.dark main .create .txt-input{
+    background: #474747;
+}
+body.dark main .create .txt-input .create-title input{
+    background: #474747;
+    border-bottom: 1px solid #fff;
+}
+body.dark main .create .txt-input .create-desc textarea{
+    background: #474747;
+    color: #fff;
+    border-left: 3px solid #fff;
+}
+body.dark main .create .txt-input .icons .btn{
+    background: transparent;
+}
+body.dark main .create .txt-input .icons .important-btn:hover{
+    background: #e22929;
+}
+body.dark main .create .txt-input .icons .school-btn:hover{
+    background: #88abff;
+}
+body.dark main .create .txt-input .icons .work-btn:hover{
+    background: green;
+}
+body.dark main .create .txt-input .icons .others-btn:hover{
+    background: orange;
+}
+body.dark main .create .txt-input form button{
+    background: #696969;
+}
+body.dark main .create form .create-desc.red textarea{
+    border-left: 3px solid #e22929;
+}
+body.dark main .create form .create-desc.blue textarea{
+    border-left: 3px solid #88abff;
+}
+body.dark main .create form .create-desc.green textarea{
+    border-left: 3px solid green;
+}
+body.dark main .create form .create-desc.orange textarea{
+    border-left: 3px solid orange;
+}
+body.dark main .note-wrapper .noteBox .content{
+    box-shadow: -5px -5px 10px rgba(89, 93, 97, 0.4), 5px 5px 10px rgba(89, 93, 97, 0.4) ;
+}
