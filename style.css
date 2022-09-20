@@ -566,8 +566,8 @@ form .create-desc.orange textarea{
 /* dark mode */
 /* header */
 header.dark{
-    background: #2e2d2d;
-    box-shadow: 5px 5px 10px rgba(61, 64, 66, 0.4);
+    background: #242222;
+    box-shadow: 5px 5px 10px rgba(45, 48, 49, 0.4);
 }
 header.dark .logo{
     color: #fff;
@@ -612,7 +612,7 @@ header.dark .labels .others-btn{
     border: 1px solid orange;
 }
 .mode.dark {
-    background: #2e2d2d;
+    background: #242222;
     color: #fff;
     transition: all 0.5s ease;
 }
@@ -631,34 +631,34 @@ header.dark .labels .others-btn{
     transition: all 0.5s ease;
 }
 header.dark .mode{
-    box-shadow: 5px 5px 10px rgba(61, 64, 66, 0.4), -5px -5px 10px rgba(61, 64, 66, 0.4);
+    box-shadow: 5px 5px 10px rgba(45, 48, 49, 0.4), -5px -5px 10px rgba(45, 48, 49, 0.4);
 }
 
 /* main */
 body.dark{
-    background: #2e2d2d;
+    background: #242222;
     color: #fff;
 }
 body.dark main .note-wrapper .addBox .icon{
-    background: #2e2d2d;
-    box-shadow: 5px 5px 10px rgba(61, 64, 66, 0.4), -5px -5px 10px rgba(61, 64, 66, 0.4) ;
+    background: #242222;
+    box-shadow: 5px 5px 10px rgba(45, 48, 49, 0.4), -5px -5px 10px rgba(45, 48, 49, 0.4) ;
 }
 body.dark main .note-wrapper .noteBox .settings .menu{
-    background: #2e2d2d;
+    background: #242222;
 }
 body.dark main .note-wrapper .noteBox .settings .menu li:hover{
     background: #696969;
 }
 
 body.dark main .create .txt-input{
-    background: #2e2d2d;
+    background: #242222;
 }
 body.dark main .create .txt-input .create-title input{
-    background: #2e2d2d;
+    background: #242222;
     border-bottom: 1px solid #fff;
 }
 body.dark main .create .txt-input .create-desc textarea{
-    background: #2e2d2d;
+    background: #242222;
     color: #fff;
     border-left: 3px solid #fff;
 }
@@ -693,5 +693,5 @@ body.dark main .create form .create-desc.orange textarea{
     border-left: 3px solid orange;
 }
 body.dark main .note-wrapper .noteBox .content{
-    box-shadow:  5px 5px 10px rgba(61, 64, 66, 0.4), -5px -5px 10px rgba(61, 64, 66, 0.4);
+    box-shadow:  5px 5px 10px rgba(45, 48, 49, 0.4), -5px -5px 10px rgba(45, 48, 49, 0.4);
 }
